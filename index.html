@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="lqsadle.js"></script>
+    <title>LQSAdle</title>
     <link rel="stylesheet" href="lqsadle.css">
-    <title>Document</title>
 </head>
 
 <body>
+    <div class="container">
+        <div id="victory"></div>
+        <h1>LQSAdle</h1>
+        <p>Adivina el personaje de "La que se avecina"</p>
 
+        <div id="input-container">
+            <input type="text" id="guess-input" placeholder="Escribe el nombre del personaje..."
+                list="character-options" />
+            <datalist id="character-options">
+            </datalist>
+            <button id="submit-btn" disabled>Adivinar</button>
+        </div>
+
+        <div id="hints">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Género</th>
+                        <th>Hijos</th>
+                        <th>Nacionalidad</th>
+                        <th>Piso</th>
+                        <th>Temporada de aparición</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div id="results-container">
+        </div>
+    </div>
+
+    <script src="lqsadle.js"></script>
 </body>
 
 </html>
