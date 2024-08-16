@@ -75,17 +75,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 pisoHintClass = 'midCorrect-hint';
             }
 
-            const temporadaHintClass = guessedCharacter.temporadaAparicion === currentCharacter.temporadaAparicion ? 'correct-hint' : 'incorrect-hint';
+            let ocupacionHintClass = 'incorrect-hint';
+            if (arraysAreEqual(guessedCharacter.ocupacion, currentCharacter.ocupacion)) {
+                ocupacionHintClass = 'correct-hint';
+            } else if (guessedCharacter.ocupacion.some(ocupacion => currentCharacter.ocupacion.includes(ocupacion))) {
+                ocupacionHintClass = 'midCorrect-hint';
+            }
 
+            const temporadaHintClass = guessedCharacter.temporadaAparicion === currentCharacter.temporadaAparicion ? 'correct-hint' : 'incorrect-hint';
             resultDiv.innerHTML += `
                 <table>
                     <tbody>
                         <tr>
                             <td><strong>${guessedCharacter.nombre}</strong></td>
-                            <td class="${generoHintClass}">${guessedCharacter.genero}</td>
+
+                            <td class="${generoHintClass}">
+                                ${guessedCharacter.genero.map(genero => genero).join('<br>')}
+                            </td>
+
                             <td class="${hijosHintClass}">${guessedCharacter.hijos}</td>
                             <td class="${nacionalidadHintClass}">${guessedCharacter.nacionalidad}</td>
-                            <td class="${pisoHintClass}">${guessedCharacter.piso}</td>
+
+                            <td class="${pisoHintClass}">
+                                ${guessedCharacter.piso.map(piso => piso).join('<br>')}
+                            </td>
+
+                            <td class="${ocupacionHintClass}">
+                                ${guessedCharacter.ocupacion.map(ocupacion => ocupacion).join('<br>')}
+                            </td>
+
                             <td class="${temporadaHintClass}">${guessedCharacter.temporadaAparicion}</td>
                         </tr>
                     </tbody>

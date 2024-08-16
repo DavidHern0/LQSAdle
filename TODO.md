@@ -8,7 +8,11 @@
 
 (x) Pisos/Hijos específicos (más de uno por personaje)
 
-() Separar funciones en distintos archivos JS (getCharacters())
+(x) Separar funciones en distintos archivos JS (getCharacters())
+
+(x) Añadir ocupación
+
+() Añadir edad
 
 () Mejorar estilo general
 

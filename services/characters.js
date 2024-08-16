@@ -3,20 +3,22 @@
 const familiaRivasFigueroa = [
     {
         nombre: "Amador Rivas",
-        apodo: "Capitán Salami",
+        apodo: "Cuqui",
         genero: ["Masculino"],
         hijos: 4,
         nacionalidad: "Española",
         piso: ["Garaje", "Caravana", "Bajo A", "1º B", "2º A"],
+        ocupacion: ["Banquero", "Stripper", "Vendedor", "Desempleado", "Hombre Florero", "Varios trabajos"],
         temporadaAparicion: 1
     },
     {
         nombre: "Maite Figueroa",
-        apodo: "",
+        apodo: "Cuqui",
         genero: ["Femenino"],
         hijos: 4,
         nacionalidad: "Española",
         piso: ["Garaje", "Bajo A", "1º A", "2º A"],
+        ocupacion: ["Vendedor", "Masajista", "Escritor", "Exconvicto"],
         temporadaAparicion: 1
     },
     {
@@ -26,6 +28,7 @@ const familiaRivasFigueroa = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Bajo A", "1º C", "2º A"],
+        ocupacion: ["Pescadero", "DJ", "Vendedor"],
         temporadaAparicion: 7
     }
 ];
@@ -38,6 +41,7 @@ const familiaRecioEscobar = [
         hijos: 2,
         nacionalidad: "Española",
         piso: ["Bajo B", "1º C"],
+        ocupacion: ["Pescadero", "Empresario"],
         temporadaAparicion: 1
     },
     {
@@ -47,6 +51,7 @@ const familiaRecioEscobar = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["1º C", "2º C"],
+        ocupacion: ["Pescadero", "Monja", "Ama de casa"],
         temporadaAparicion: 1
     },
     {
@@ -56,6 +61,7 @@ const familiaRecioEscobar = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Bajo B", "1º C", "2º A"],
+        ocupacion: ["Repostera", "Monja"],
         temporadaAparicion: 8
     },
     {
@@ -65,6 +71,7 @@ const familiaRecioEscobar = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["1º C"],
+        ocupacion: ["Pescadero", "Monja", "Internada"],
         temporadaAparicion: 2
     }
 ];
@@ -77,6 +84,7 @@ const familiaMarotoTrujillo = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo A", "2º B", "Ático B"],
+        ocupacion: ["Informático"],
         temporadaAparicion: 1
     },
     {
@@ -86,6 +94,7 @@ const familiaMarotoTrujillo = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Ático B"],
+        ocupacion: ["Fotógrafo", "Actor"],
         temporadaAparicion: 1
     },
     {
@@ -95,6 +104,7 @@ const familiaMarotoTrujillo = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["2º B", "Ático B"],
+        ocupacion: ["Jubilado"],
         temporadaAparicion: 1
     },
     {
@@ -104,6 +114,7 @@ const familiaMarotoTrujillo = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo A", "Ático B"],
+        ocupacion: ["Actor"],
         temporadaAparicion: 3
     },
     {
@@ -113,6 +124,7 @@ const familiaMarotoTrujillo = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo A", "2º B", "Ático B"],
+        ocupacion: ["Espetero", "Camarero", "Empresario"],
         temporadaAparicion: 6
     },
     {
@@ -122,6 +134,7 @@ const familiaMarotoTrujillo = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["2º B"],
+        ocupacion: ["Jubilado"],
         temporadaAparicion: 1
     }
 ];
@@ -134,6 +147,7 @@ const familiaPastorMadariaga = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo B", "Ático A"],
+        ocupacion: ["Político"],
         temporadaAparicion: 1
     },
     {
@@ -143,6 +157,7 @@ const familiaPastorMadariaga = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo B", "1º C", "2º B"],
+        ocupacion: ["Peluquero", "Masajista", "Ama de casa"],
         temporadaAparicion: 1
     },
     {
@@ -152,6 +167,7 @@ const familiaPastorMadariaga = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo B", "Ático A"],
+        ocupacion: ["Psicólgo"],
         temporadaAparicion: 3
     },
     {
@@ -161,6 +177,7 @@ const familiaPastorMadariaga = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["2º B"],
+        ocupacion: ["Odontólogo"],
         temporadaAparicion: 5
     }
 ];
@@ -173,6 +190,7 @@ const familiaCarrascosa = [
         hijos: "Sí",
         nacionalidad: "Española",
         piso: ["Bajo B", "2º C", "Ático A"],
+        ocupacion: ["Jubilado", "Ama de casa", "Narcotraficante"],
         temporadaAparicion: 9
     },
     {
@@ -182,6 +200,7 @@ const familiaCarrascosa = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Bajo B", "Ático A"],
+        ocupacion: ["Diseñador", "Narcotraficante"],
         temporadaAparicion: 9
     },
     {
@@ -191,6 +210,7 @@ const familiaCarrascosa = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Fuera", "Ático A"],
+        ocupacion: ["Desempleado", "Narcotraficante"],
         temporadaAparicion: 9
     },
     {
@@ -200,6 +220,7 @@ const familiaCarrascosa = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["2º C"],
+        ocupacion: ["Desconocido"],
         temporadaAparicion: 1
     },
     {
@@ -209,6 +230,7 @@ const familiaCarrascosa = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["2º C"],
+        ocupacion: ["Jubilado"],
         temporadaAparicion: 8
     }
 ];
@@ -221,6 +243,7 @@ const chupipandi = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["1º A"],
+        ocupacion: ["Sirviente", "Camarero", "Desempleado"],
         temporadaAparicion: 1
     },
     {
@@ -230,6 +253,7 @@ const chupipandi = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["1º A"],
+        ocupacion: ["Vendedor", "Camarero", "Wedding planner"],
         temporadaAparicion: 1
     },
     {
@@ -239,6 +263,7 @@ const chupipandi = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Ático A"],
+        ocupacion: ["Abogado"],
         temporadaAparicion: 7
     }
 ];
@@ -252,6 +277,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Caravana", "Bajo B", "1º A"],
+        ocupacion: ["Jardinero", "Conserje", "Camarero", "Yonki"],
         temporadaAparicion: 1
     },
     {
@@ -261,6 +287,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Caravana", "Bajo B"],
+        ocupacion: ["Conserje", "Camarero"],
         temporadaAparicion: 1
     },
     {
@@ -270,6 +297,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Peruano",
         piso: ["Fuera", "1º C"],
+        ocupacion: ["Pescadero"],
         temporadaAparicion: 4
     },
     {
@@ -279,6 +307,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Bajo A", "2º A"],
+        ocupacion: ["Jubilado"],
         temporadaAparicion: 1
     },
     {
@@ -288,6 +317,7 @@ const otrosPersonajes = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo A", "2º A"],
+        ocupacion: ["Jubilado"],
         temporadaAparicion: 1
     },
     {
@@ -297,6 +327,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Bajo B", "1º B"],
+        ocupacion: ["Pianista", "Artista"],
         temporadaAparicion: 9
     },
     {
@@ -306,6 +337,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["1º A"],
+        ocupacion: ["Vendedor"],
         temporadaAparicion: 1
     },
     {
@@ -315,6 +347,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["1º B"],
+        ocupacion: ["Vendedor", "Empresario"],
         temporadaAparicion: 1
     },
     {
@@ -324,6 +357,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Africana",
         piso: ["1º C"],
+        ocupacion: ["Conserje", "Pescadero", "Sirviente"],
         temporadaAparicion: 10
     },
     {
@@ -333,6 +367,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Bajo A", "Ático A"],
+        ocupacion: ["Actor"],
         temporadaAparicion: 1
     },
     {
@@ -342,6 +377,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Ático A"],
+        ocupacion: ["Vendedor"],
         temporadaAparicion: 1
     },
     {
@@ -351,16 +387,68 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["Fuera"],
+        ocupacion: ["Prostituta"],
         temporadaAparicion: 8
     },
     {
         nombre: "Agustín Gordillo",
         apodo: "",
-        genero: ["Masculino", "Femenino"],
+        genero: ["Masculino"],
         hijos: "No",
         nacionalidad: "Española",
         piso: ["2º A"],
+        ocupacion: ["Varios trabajos"],
         temporadaAparicion: 11
+    },
+    {
+        nombre: "María Teresa",
+        apodo: "Alcaldesa",
+        genero: ["Femenino"],
+        hijos: 3,
+        nacionalidad: "Española",
+        piso: ["Fuera", "Bajo B"],
+        ocupacion: ["Político"],
+        temporadaAparicion: 8
+    },
+    {
+        nombre: "Alejandro Echevarria",
+        apodo: "Primer ministro",
+        genero: ["Masculino"],
+        hijos: 3,
+        nacionalidad: "Española",
+        piso: ["Fuera"],
+        ocupacion: ["Político"],
+        temporadaAparicion: 8
+    },
+    {
+        nombre: "Raluca Petrescu",
+        apodo: "",
+        genero: ["Femenino"],
+        hijos: 1,
+        nacionalidad: "Rumana",
+        piso: ["Fuera"],
+        ocupacion: ["Prostituta", "Pescadera", "Masajista", "Sirviente"],
+        temporadaAparicion: 6
+    },
+    {
+        nombre: "Chusa",
+        apodo: "La Chusa",
+        genero: ["Femenino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["Fuera", "Bajo A", "Ático A"],
+        ocupacion: ["Prostituta", "Yonki", "Sirviente"],
+        temporadaAparicion: 4
+    },
+    {
+        nombre: "Héctor",
+        apodo: "Cabeza nido",
+        genero: ["Masculino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["Fuera", "Bajo A"],
+        ocupacion: ["Artista", "Hombre florero"],
+        temporadaAparicion: 9
     }
 ];
 
