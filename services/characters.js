@@ -8,7 +8,7 @@ const familiaRivasFigueroa = [
         hijos: 4,
         nacionalidad: "Española",
         piso: ["Garaje", "Caravana", "Bajo A", "1º B", "2º A"],
-        ocupacion: ["Banquero", "Stripper", "Vendedor", "Desempleado", "Hombre Florero", "Varios trabajos"],
+        ocupacion: ["Banquero", "Stripper", "Vendedor", "Desempleado", "Hombre florero", "Varios trabajos"],
         temporadaAparicion: 1
     },
     {
@@ -167,7 +167,7 @@ const familiaPastorMadariaga = [
         hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo B", "Ático A"],
-        ocupacion: ["Psicólgo"],
+        ocupacion: ["Psicólogo"],
         temporadaAparicion: 3
     },
     {
@@ -265,6 +265,16 @@ const chupipandi = [
         piso: ["Ático A"],
         ocupacion: ["Abogado"],
         temporadaAparicion: 7
+    },
+    {
+        nombre: "Blanca Neruda",
+        apodo: "",
+        genero: ["Femenino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["1º A"],
+        ocupacion: ["Vendedor"],
+        temporadaAparicion: 2
     }
 ];
 
@@ -289,6 +299,16 @@ const otrosPersonajes = [
         piso: ["Caravana", "Bajo B"],
         ocupacion: ["Conserje", "Camarero"],
         temporadaAparicion: 1
+    },
+    {
+        nombre: "José Ignacio",
+        apodo: "",
+        genero: ["Masculino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["Fuera"],
+        ocupacion: ["Abogado"],
+        temporadaAparicion: 7
     },
     {
         nombre: "Rosario Parrales",
@@ -449,7 +469,17 @@ const otrosPersonajes = [
         piso: ["Fuera", "Bajo A"],
         ocupacion: ["Artista", "Hombre florero"],
         temporadaAparicion: 9
-    }
+    },
+    {
+        nombre: "Cecilio el terapeuta",
+        apodo: "Argentino",
+        genero: ["Masculino"],
+        hijos: "No",
+        nacionalidad: "Argentina",
+        piso: ["Fuera"],
+        ocupacion: ["Psicólogo"],
+        temporadaAparicion: 7
+    },
 ];
 
 export function getCharacters() {
