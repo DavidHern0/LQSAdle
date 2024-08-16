@@ -187,7 +187,7 @@ const familiaCarrascosa = [
         nombre: "Menchu Carrascosa",
         apodo: "",
         genero: ["Femenino"],
-        hijos: "Sí",
+        hijos: 2,
         nacionalidad: "Española",
         piso: ["Bajo B", "2º C", "Ático A"],
         ocupacion: ["Jubilado", "Ama de casa", "Narcotraficante"],
@@ -432,7 +432,7 @@ const otrosPersonajes = [
     },
     {
         nombre: "Alejandro Echevarria",
-        apodo: "Primer ministro",
+        apodo: "Señor ministro",
         genero: ["Masculino"],
         hijos: 3,
         nacionalidad: "Española",
