@@ -83,32 +83,42 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const temporadaHintClass = guessedCharacter.temporadaAparicion === currentCharacter.temporadaAparicion ? 'correct-hint' : 'incorrect-hint';
+
+            let arrowClass;
+            if (guessedCharacter.temporadaAparicion > currentCharacter.temporadaAparicion) {
+                arrowClass = 'arrow arrow-down';
+            } else if (guessedCharacter.temporadaAparicion < currentCharacter.temporadaAparicion) {
+                arrowClass = 'arrow arrow-up';
+            } else{
+                arrowClass = '';
+            }
+
             resultDiv.innerHTML += `
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><strong>${guessedCharacter.nombre}</strong></td>
-
-                            <td class="${generoHintClass}">
-                                ${guessedCharacter.genero.map(genero => genero).join('<br>')}
-                            </td>
-
-                            <td class="${hijosHintClass}">${guessedCharacter.hijos}</td>
-                            <td class="${nacionalidadHintClass}">${guessedCharacter.nacionalidad}</td>
-
-                            <td class="${pisoHintClass}">
-                                ${guessedCharacter.piso.map(piso => piso).join('<br>')}
-                            </td>
-
-                            <td class="${ocupacionHintClass}">
-                                ${guessedCharacter.ocupacion.map(ocupacion => ocupacion).join('<br>')}
-                            </td>
-
-                            <td class="${temporadaHintClass}">${guessedCharacter.temporadaAparicion}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            `;
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="name"><strong>${guessedCharacter.nombre}</strong></td>
+        
+                        <td class="${generoHintClass}">
+                            ${guessedCharacter.genero.map(genero => genero).join('<br>')}
+                        </td>
+        
+                        <td class="${hijosHintClass}">${guessedCharacter.hijos}</td>
+                        <td class="${nacionalidadHintClass}">${guessedCharacter.nacionalidad}</td>
+        
+                        <td class="scroll-cell ${pisoHintClass}">
+                            <div>${guessedCharacter.piso.map(piso => piso).join('<br>')}</div>
+                        </td>
+        
+                        <td class="scroll-cell ${ocupacionHintClass}">
+                            <div>${guessedCharacter.ocupacion.map(ocupacion => ocupacion).join('<br>')}</div>
+                        </td>
+        
+                        <td class="${temporadaHintClass} ${arrowClass}">${guessedCharacter.temporadaAparicion}</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
 
             guessInput.value = '';
             submitBtn.disabled = true;
