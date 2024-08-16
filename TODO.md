@@ -6,7 +6,7 @@
 
 (x) Organizar JS en funciones
 
-() Pisos/Hijos específicos (más de uno por personaje)
+(x) Pisos/Hijos específicos (más de uno por personaje)
 
 () Separar funciones en distintos archivos JS (getCharacters())
 

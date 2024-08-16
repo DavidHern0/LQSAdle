@@ -23,6 +23,10 @@ body {
     flex-direction: column-reverse;
 }
 
+.midCorrect-hint {
+    color: #dad60a;
+}
+
 .correct-hint {
     color: #27ae60;
 }

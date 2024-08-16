@@ -12,258 +12,290 @@ document.addEventListener('DOMContentLoaded', function () {
             {
                 nombre: "Amador Rivas",
                 genero: "Masculino",
-                hijos: "Sí",
+                hijos: 4,
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
+                piso: ["Garaje", "Caravana", "Bajo A", "1º B", "2º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Maite Figueroa",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 4,
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
+                piso: ["Garaje", "Bajo A", "1º A", "2º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Antonio Recio",
                 genero: "Masculino",
-                hijos: "Sí",
+                hijos: 2,
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "1"
+                piso: ["Bajo B", "1º C"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Berta Escobar",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "1"
+                piso: ["1º C", "2º C"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Javier Maroto",
                 genero: "Masculino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "1"
+                piso: ["Bajo A", "2º B", "Ático B"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Lola Trujillo",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "1"
+                piso: ["Ático B"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Enrique Pastor",
                 genero: "Masculino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
+                piso: ["Bajo B", "Ático A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Araceli Madariaga",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
+                piso: ["Bajo B", "1º C", "2º B"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Mari Tere Valverde",
                 genero: "Femenino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
-            },
-            {
-                nombre: "Gregoria Gutiérrez",
-                genero: "Femenino",
-                hijos: "Sí",
-                nacionalidad: "Española",
-                piso: "Segundo",
-                temporadaAparicion: "1"
+                piso: ["Bajo A", "2º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Izaskun Sagastume",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
+                piso: ["Bajo A", "2º A"],
+                temporadaAparicion: 1
+            },
+            {
+                nombre: "Vicente Maroto",
+                genero: "Masculino",
+                hijos: 1,
+                nacionalidad: "Española",
+                piso: ["2º B", "Ático B"],
+                temporadaAparicion: 1
+            },
+            {
+                nombre: "Gregoria Gutiérrez",
+                genero: "Femenino",
+                hijos: 1,
+                nacionalidad: "Española",
+                piso: ["2º B"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Nines Chacón",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "1"
+                piso: ["1º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Raquel Villanueva",
                 genero: "Femenino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "1"
+                piso: ["1º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Rosario Parrales",
-                genero: "Femenino",
+                genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Otros",
-                temporadaAparicion: "4"
+                piso: ["Fuera", "1º C"],
+                temporadaAparicion: 4
             },
             {
                 nombre: "Bruno Quiroga",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Segundo",
-                temporadaAparicion: "9"
+                piso: ["Bajo B", "1º B"],
+                temporadaAparicion: 9
             },
             {
                 nombre: "Judith Becker",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "3"
+                piso: ["Bajo B", "Ático A"],
+                temporadaAparicion: 3
             },
             {
                 nombre: "Teodoro Rivas",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "7"
+                piso: ["Bajo A", "1º C", "2º A"],
+                temporadaAparicion: 7
             },
             {
                 nombre: "Alba Recio",
                 genero: "Femenino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Segundo",
-                temporadaAparicion: "8"
+                piso: ["Bajo B", "1º C", "2º A"],
+                temporadaAparicion: 8
             },
             {
                 nombre: "Coque Calatrava",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Otros",
-                temporadaAparicion: "1"
+                piso: ["Caravana", "Bajo B", "1º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Maxi Angulo",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Bajo",
-                temporadaAparicion: "1"
+                piso: ["Caravana", "Bajo B"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Estela Reynolds",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: 1,
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "3"
+                piso: ["Bajo A", "Ático B"],
+                temporadaAparicion: 3
+            },
+            {
+                nombre: "Fermín Trujillo",
+                genero: "Masculino",
+                hijos: 1,
+                nacionalidad: "Española",
+                piso: ["Bajo A", "2º B", "Ático B"],
+                temporadaAparicion: 6
             },
             {
                 nombre: "Rebeca Ortiz",
                 genero: "Femenino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "7"
+                piso: ["Ático A"],
+                temporadaAparicion: 7
             },
             {
                 nombre: "Yolanda Morcillo",
                 genero: "Femenino",
-                hijos: "Sí",
+                hijos: "No",
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "9"
+                piso: ["Bajo B", "Ático A"],
+                temporadaAparicion: 9
+            },
+            {
+                nombre: "José 'Josito' Morcillo",
+                genero: "Masculino",
+                hijos: "No",
+                nacionalidad: "Española",
+                piso: ["Fuera", "Ático A"],
+                temporadaAparicion: 9
             },
             {
                 nombre: "Cristina Aguilera",
                 genero: "Femenino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "1"
+                piso: ["1º A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Leonardo Romaní",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "1"
-            },
-            {
-                nombre: "victory Rafaela",
-                genero: "Femenino",
-                hijos: "No",
-                nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "13"
+                piso: ["1º B"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Germán Palomares",
                 genero: "Masculino",
-                hijos: "Sí",
+                hijos: "No",
                 nacionalidad: "Española",
-                piso: "Segundo",
-                temporadaAparicion: "1"
+                piso: ["2º C"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Ongombo",
                 genero: "Masculino",
-                hijos: "Sí",
+                hijos: "No",
                 nacionalidad: "Africana",
-                piso: "Primero",
-                temporadaAparicion: "10"
+                piso: ["1º C"],
+                temporadaAparicion: 10
             },
             {
                 nombre: "Menchu Carrascosa",
-                genero: "Femenino",
+                genero: 1,
                 hijos: "Sí",
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "9"
+                piso: ["Bajo B", "2º C", "Ático A"],
+                temporadaAparicion: 9
             },
             {
                 nombre: "Sergio Arias",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "1"
+                piso: ["Bajo A", "Ático A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Joaquin Arias",
                 genero: "Masculino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Ático",
-                temporadaAparicion: "1"
+                piso: ["Ático A"],
+                temporadaAparicion: 1
             },
             {
                 nombre: "Reyes Ballesteros",
                 genero: "Femenino",
                 hijos: "No",
                 nacionalidad: "Española",
-                piso: "Primero",
-                temporadaAparicion: "5"
+                piso: ["2º B"],
+                temporadaAparicion: 5
+            },
+            {
+                nombre: "Fina Palomares",
+                genero: "Femenino",
+                hijos: 1,
+                nacionalidad: "Española",
+                piso: ["2º C"],
+                temporadaAparicion: 8
+            },
+            {
+                nombre: "Violeta Recio",
+                genero: "Femenino",
+                hijos: "No",
+                nacionalidad: "Española",
+                piso: ["1º C"],
+                temporadaAparicion: 2
             }
         ];
         return personajesLQSA;
@@ -295,6 +327,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function arraysAreEqual(arr1, arr2) {
+        if (arr1.length !== arr2.length) return false;
+        return arr1.every((value, index) => value === arr2[index]);
+    }
+
     // Función que comprueba si se ha acertado el Character
     function handleSubmit(submitBtn, guessInput, getCharacters, tried, currentCharacter) {
         submitBtn.addEventListener('click', function () {
@@ -310,7 +347,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const generoHintClass = guessedCharacter.genero === currentCharacter.genero ? 'correct-hint' : 'incorrect-hint';
             const hijosHintClass = guessedCharacter.hijos === currentCharacter.hijos ? 'correct-hint' : 'incorrect-hint';
             const nacionalidadHintClass = guessedCharacter.nacionalidad === currentCharacter.nacionalidad ? 'correct-hint' : 'incorrect-hint';
-            const pisoHintClass = guessedCharacter.piso === currentCharacter.piso ? 'correct-hint' : 'incorrect-hint';
+
+            let pisoHintClass = 'incorrect-hint';
+            if (arraysAreEqual(guessedCharacter.piso, currentCharacter.piso)) {
+                pisoHintClass = 'correct-hint';
+            } else if (guessedCharacter.piso.some(piso => currentCharacter.piso.includes(piso))) {
+                pisoHintClass = 'midCorrect-hint';
+            }
+
             const temporadaHintClass = guessedCharacter.temporadaAparicion === currentCharacter.temporadaAparicion ? 'correct-hint' : 'incorrect-hint';
 
             resultDiv.innerHTML += `
