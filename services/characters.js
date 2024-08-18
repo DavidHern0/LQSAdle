@@ -39,7 +39,7 @@ const familiaRivasFigueroa = [
         nacionalidad: "Española",
         piso: ["Bajo A"],
         ocupacion: ["Jubilado"],
-        temporadaAparicion: 1
+        temporadaAparicion: 5
     }
 ];
 

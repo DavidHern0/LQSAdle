@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>LQSAdle</title>
     <link rel="stylesheet" href="lqsadle.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>LQSAdle</h1>
+        <h1 id="game-title">LQSAdle - Modo clásico</h1>
+        <button class="btn" id="toggle-mode-btn">Cambiar a Modo Ilimitado</button>
         <div class="info">
-            <h3>¡Adivina el personaje de "La que se avecina" de hoy!</h3>
+            <h3 id="info-msg">¡Adivina el personaje de "La que se avecina" de hoy!</h3>
             <h4> Escribe cualquier personaje para empezar. </h4>
         </div>
 
@@ -23,7 +25,8 @@
                 list="character-options" />
             <datalist id="character-options">
             </datalist>
-            <button id="submit-btn" disabled>Adivinar</button>
+            <button class="btn" id="submit-btn" disabled>Adivinar</button>
+            <button class="btn" id="reset-btn" style="display: none;">Volver a Jugar</button>
         </div>
 
         <div id="hints">
@@ -43,6 +46,9 @@
         </div>
 
         <div id="results-container">
+        </div>
+        <div id="score-container" style="display: none;">
+            <h2>Puntuación: <span id="score">0</span></h2>
         </div>
     </div>
 

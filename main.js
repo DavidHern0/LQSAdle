@@ -1,9 +1,12 @@
-// main.js
+// main.js 
 import { getCharacters } from './services/characters.js';
 import { arraysAreEqual, createConfetti, enableInput, disableInput } from './services/logic.js';
-import { getDailyCharacter, updateCountdown } from './services/countdown.js'
+import { getDailyCharacter, updateCountdown } from './services/countdown.js';
 
 document.addEventListener('DOMContentLoaded', function () {
+    let isUnlimitedMode = false;
+    let currentCharacter = getDailyCharacter();
+    let score = 0;
 
     const tried = [];
     const dataList = document.getElementById('character-options');
@@ -12,13 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultDiv = document.getElementById('results-container');
     const victoryDiv = document.getElementById('victory');
     const countdownDiv = document.getElementById('countdown');
+    const toggleModeBtn = document.getElementById('toggle-mode-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const gameTitle = document.getElementById('game-title');
+    const scoreContainer = document.getElementById('score-container');
+    const scoreSpan = document.getElementById('score');
+    const infoMsg = document.getElementById('info-msg');
 
-    // let currentCharacter = getCharacters()[Math.floor(Math.random() * getCharacters().length)]; - MODO ILIMITADO
-    let currentCharacter = getDailyCharacter(); // - MODO CLÁSICO
-    console.log(currentCharacter.nombre)
 
     // Función para que aparezca la lista de personajes al escribir en el input
-    function handleInput(guessInput, dataList, submitBtn, getCharacters, tried) {
+    function handleInput() {
         guessInput.addEventListener('input', function () {
             const inputText = guessInput.value.toLowerCase();
             dataList.innerHTML = "";
@@ -46,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Función que comprueba si se ha acertado el Character
-    function handleSubmit(submitBtn, guessInput, getCharacters, tried, currentCharacter) {
+    function handleSubmit() {
         submitBtn.addEventListener('click', function () {
             disableInput(guessInput);
 
@@ -143,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (lastAnimatedCell) {
                 lastAnimatedCell.addEventListener('animationend', () => {
                     if (isCorrect) {
-                        handleVictory(guessInput, submitBtn, victoryDiv);
+                        handleVictory();
                     }
                     enableInput(guessInput);
                 });
@@ -153,21 +159,77 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function handleVictory(guessInput, submitBtn, victoryDiv) {
+
+    // Función que maneja la victoria
+    function handleVictory() {
         guessInput.disabled = true;
         submitBtn.disabled = true;
-        guessInput.style.display = 'none';
-        submitBtn.style.display = 'none';
 
-        const winMessage = document.createElement('div');
-        winMessage.innerHTML = "<h2>¡HAS ACERTADO!</h2>";
-        winMessage.classList.add('win-message');
+        const winMessage = document.createElement('p');
+        winMessage.innerHTML = "<strong>¡Ganaste!</strong> <br> El personaje era <strong>" + currentCharacter.nombre + "</strong>.";
         victoryDiv.appendChild(winMessage);
+
         createConfetti();
-        countdownDiv.style.display = "block" //  - MODO CLÁSICO
+
+        if (isUnlimitedMode) {
+            score += 1;
+            scoreSpan.textContent = score;
+            resetBtn.style.display = 'inline';
+        } else {
+            guessInput.style.display = 'none';
+            submitBtn.style.display = 'none';
+            countdownDiv.style.display = "block"
+        }
     }
-    
-    updateCountdown(); //  - MODO CLÁSICO
-    handleInput(guessInput, dataList, submitBtn, getCharacters, tried);
-    handleSubmit(submitBtn, guessInput, getCharacters, tried, currentCharacter);
+
+
+    // Función que cambia el modo de juego
+    function switchMode() {
+        if (isUnlimitedMode) {
+            currentCharacter = getDailyCharacter();
+            updateCountdown(countdownDiv);
+            toggleModeBtn.textContent = "Cambiar a Modo Ilimitado";
+            gameTitle.textContent = "LQSAdle - Modo clásico";
+            infoMsg.textContent = '¡Adivina el personaje de "La que se avecina" de hoy!';
+            scoreContainer.style.display = 'none';
+            isUnlimitedMode = false;
+        } else {
+            currentCharacter = getCharacters()[Math.floor(Math.random() * getCharacters().length)];
+            toggleModeBtn.textContent = "Cambiar a Modo Clásico";
+            gameTitle.textContent = "LQSAdle - Modo ilimitado";
+            infoMsg.textContent = '¡Adivina los personaje de "La que se avecina" de forma ilimitada!';
+            scoreContainer.style.display = 'block';
+            countdownDiv.style.display = "none"
+            isUnlimitedMode = true;
+        }
+        resultDiv.innerHTML = "";
+        victoryDiv.innerHTML = "";
+        guessInput.value = '';
+        submitBtn.disabled = true;
+    }
+
+
+    // Función que inicia un nuevo juego en unlimitedMode
+    function resetGame() {
+        currentCharacter = getCharacters()[Math.floor(Math.random() * getCharacters().length)];
+        tried.length = 0;
+        resultDiv.innerHTML = "";
+        victoryDiv.innerHTML = "";
+        guessInput.value = '';
+        submitBtn.disabled = true;
+        guessInput.disabled = false;
+        guessInput.style.display = 'inline';
+        submitBtn.style.display = 'inline';
+        resetBtn.style.display = 'none';
+    }
+
+    handleInput();
+    handleSubmit();
+
+    toggleModeBtn.addEventListener('click', switchMode);
+    resetBtn.addEventListener('click', resetGame);
+
+    if (!isUnlimitedMode) {
+        updateCountdown(countdownDiv);
+    }
 });

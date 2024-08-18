@@ -71,7 +71,7 @@ h4 {
     box-shadow: none;
 }
 
-#submit-btn {
+.btn {
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -85,13 +85,13 @@ h4 {
     outline: none;
 }
 
-#submit-btn:hover:not(:disabled) {
+.btn:hover:not(:disabled) {
     background-color: #c9760b;
     transform: translateY(-2px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#submit-btn:disabled {
+.btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
     box-shadow: none;
@@ -283,7 +283,7 @@ td.scroll-cell div {
         width: 100%;
     }
 
-    #submit-btn {
+    .btn {
         width: 100%;
         max-width: 400px;
     }
