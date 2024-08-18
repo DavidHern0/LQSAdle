@@ -26,6 +26,66 @@ body {
     width: 90%;
 }
 
+.info p {
+margin-bottom: 0;
+}
+
+.info {
+    border-color: #000000;
+    padding: 20px 0 50px 0;
+}
+h3,h4{
+    font-weight: 100;
+}
+#input-container {
+    padding-bottom: 15px;
+}
+
+#guess-input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 2px solid #dd830d;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 251, 241, 0.9);
+    color: #333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#guess-input:hover, #guess-input:focus {
+    border-color: #b46b0a;
+    background-color: rgba(255, 244, 218, 0.9);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#submit-btn:hover:not(:disabled) {
+    background-color: #c9760b;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 #results-container {
     text-align: left;
     display: flex;
@@ -50,15 +110,16 @@ table {
     table-layout: fixed;
 }
 
-th,
-td {
-    font-weight: bold;
+#hints th {
+    padding: 10px 10px 5px 10px;
     text-align: center;
-    border: 1px solid #ccc;
-    max-height: 75px;
-    height: 75px;
-    width: 75px;
-    z-index: 1;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#hints tr, #hints td {
+    border: none;
 }
 
 .name {
@@ -66,6 +127,12 @@ td {
 }
 
 td {
+    font-weight: bold;
+    text-align: center;
+    max-height: 75px;
+    height: 75px;
+    width: 75px;
+    z-index: 1;
     color: #ccc;
     box-shadow: inset 0px 0px 5px rgb(17, 17, 17);
 }
@@ -173,6 +240,20 @@ td.scroll-cell div {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 30px solid #6d0a07;
+    }
+
+    #input-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #guess-input {
+        width: 100%;
+    }
+
+    #submit-btn {
+        width: 100%;
+        max-width: 400px;
     }
 }
 
