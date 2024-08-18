@@ -153,6 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleVictory(guessInput, submitBtn, victoryDiv) {
         guessInput.disabled = true;
         submitBtn.disabled = true;
+        guessInput.style.display = 'none';
+        submitBtn.style.display = 'none';
 
         const winMessage = document.createElement('div');
         winMessage.innerHTML = "<h2>¡HAS ACERTADO!</h2>";
