@@ -47,6 +47,7 @@ h4 {
 #guess-input {
     padding: 10px 15px;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 20px;
     border: 2px solid #dd830d;
     width: 100%;
@@ -62,6 +63,12 @@ h4 {
     border-color: #b46b0a;
     background-color: rgba(255, 244, 218, 0.9);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#guess-input:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 #submit-btn {
