@@ -12,11 +12,9 @@
 
 (x) Añadir ocupación
 
-() Añadir edad
-
 () Mejorar estilo general
 
-() Añadir animación al aparecer nuevo personaje en la tabla
+(x) Añadir animación al aparecer nuevo personaje en la tabla
 
 () Actualizar personaje cada 24h
 

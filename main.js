@@ -47,43 +47,40 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.addEventListener('click', function () {
             const guess = guessInput.value.toLowerCase();
             const guessedCharacter = getCharacters().find(personaje => personaje.nombre.toLowerCase() === guess);
-
+        
             if (!guessedCharacter) return;
-
+        
             tried.push(guessedCharacter.nombre);
             tried.push(guessedCharacter.apodo);
-
+        
             const isCorrect = guessedCharacter.nombre.toLowerCase() === currentCharacter.nombre.toLowerCase();
-
-            // const generoHintClass = guessedCharacter.genero === currentCharacter.genero ? 'correct-hint' : 'incorrect-hint';
-
+        
             let generoHintClass = 'incorrect-hint';
             if (arraysAreEqual(guessedCharacter.genero, currentCharacter.genero)) {
                 generoHintClass = 'correct-hint';
             } else if (guessedCharacter.genero.some(genero => currentCharacter.genero.includes(genero))) {
                 generoHintClass = 'midCorrect-hint';
             }
-
-
+        
             const hijosHintClass = guessedCharacter.hijos === currentCharacter.hijos ? 'correct-hint' : 'incorrect-hint';
             const nacionalidadHintClass = guessedCharacter.nacionalidad === currentCharacter.nacionalidad ? 'correct-hint' : 'incorrect-hint';
-
+        
             let pisoHintClass = 'incorrect-hint';
             if (arraysAreEqual(guessedCharacter.piso, currentCharacter.piso)) {
                 pisoHintClass = 'correct-hint';
             } else if (guessedCharacter.piso.some(piso => currentCharacter.piso.includes(piso))) {
                 pisoHintClass = 'midCorrect-hint';
             }
-
+        
             let ocupacionHintClass = 'incorrect-hint';
             if (arraysAreEqual(guessedCharacter.ocupacion, currentCharacter.ocupacion)) {
                 ocupacionHintClass = 'correct-hint';
             } else if (guessedCharacter.ocupacion.some(ocupacion => currentCharacter.ocupacion.includes(ocupacion))) {
                 ocupacionHintClass = 'midCorrect-hint';
             }
-
+        
             const temporadaHintClass = guessedCharacter.temporadaAparicion === currentCharacter.temporadaAparicion ? 'correct-hint' : 'incorrect-hint';
-
+        
             let arrowClass;
             if (guessedCharacter.temporadaAparicion > currentCharacter.temporadaAparicion) {
                 arrowClass = 'arrow arrow-down';
@@ -92,39 +89,54 @@ document.addEventListener('DOMContentLoaded', function () {
             } else{
                 arrowClass = '';
             }
-
-            resultDiv.innerHTML += `
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="name"><strong>${guessedCharacter.nombre}</strong></td>
         
-                        <td class="${generoHintClass}">
-                            ${guessedCharacter.genero.map(genero => genero).join('<br>')}
-                        </td>
+            const newResultHTML = `
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="name fade-in"><strong>${guessedCharacter.nombre}</strong></td>
+            
+                            <td class="${generoHintClass} fade-in">
+                                ${guessedCharacter.genero.map(genero => genero).join('<br>')}
+                            </td>
+            
+                            <td class="${hijosHintClass} fade-in">${guessedCharacter.hijos}</td>
+                            <td class="${nacionalidadHintClass} fade-in">${guessedCharacter.nacionalidad}</td>
+            
+                            <td class="scroll-cell ${pisoHintClass} fade-in">
+                                <div>${guessedCharacter.piso.map(piso => piso).join('<br>')}</div>
+                            </td>
+            
+                            <td class="scroll-cell ${ocupacionHintClass} fade-in">
+                                <div>${guessedCharacter.ocupacion.map(ocupacion => ocupacion).join('<br>')}</div>
+                            </td>
+            
+                            <td class="${temporadaHintClass} ${arrowClass} fade-in">${guessedCharacter.temporadaAparicion}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
         
-                        <td class="${hijosHintClass}">${guessedCharacter.hijos}</td>
-                        <td class="${nacionalidadHintClass}">${guessedCharacter.nacionalidad}</td>
+            resultDiv.innerHTML += newResultHTML;
         
-                        <td class="scroll-cell ${pisoHintClass}">
-                            <div>${guessedCharacter.piso.map(piso => piso).join('<br>')}</div>
-                        </td>
+            const fadeIns = document.querySelectorAll('.fade-in');
+            fadeIns.forEach(td => {
+                td.addEventListener('animationend', () => {
+                    td.classList.remove('fade-in');
+                });
+            });
         
-                        <td class="scroll-cell ${ocupacionHintClass}">
-                            <div>${guessedCharacter.ocupacion.map(ocupacion => ocupacion).join('<br>')}</div>
-                        </td>
-        
-                        <td class="${temporadaHintClass} ${arrowClass}">${guessedCharacter.temporadaAparicion}</td>
-                    </tr>
-                </tbody>
-            </table>
-        `;
-
             guessInput.value = '';
             submitBtn.disabled = true;
-
-            if (isCorrect) {
-                handleVictory(guessInput, submitBtn, victoryDiv);
+        
+            const lastAnimatedCell = document.querySelector('td:nth-child(7).fade-in');
+    
+            if (lastAnimatedCell) {
+                lastAnimatedCell.addEventListener('animationend', () => {
+                    if (isCorrect) {
+                        handleVictory(guessInput, submitBtn, victoryDiv);
+                    }
+                });
             }
         });
     }
