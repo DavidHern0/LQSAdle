@@ -1,6 +1,6 @@
 // main.js
 import { getCharacters } from './services/characters.js';
-import { arraysAreEqual, enableInput, disableInput } from './services/logic.js';
+import { arraysAreEqual, createConfetti, enableInput, disableInput } from './services/logic.js';
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
         winMessage.innerHTML = "<h2>¡HAS ACERTADO!</h2>";
         winMessage.classList.add('win-message');
         victoryDiv.appendChild(winMessage);
+        createConfetti();
     }
 
     handleInput(guessInput, dataList, submitBtn, getCharacters, tried);

@@ -334,3 +334,25 @@ td:nth-child(6).fade-in {
 td:nth-child(7).fade-in {
     animation-delay: 4.2s;
 }
+
+.confetti {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ff0;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: confetti-fall 3s linear forwards;
+    position: fixed;
+    z-index: 999;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
