@@ -18,7 +18,7 @@ const familiaRivasFigueroa = [
         hijos: 4,
         nacionalidad: "Española",
         piso: ["Garaje", "Bajo A", "1º A", "2º A"],
-        ocupacion: ["Vendedor", "Masajista", "Escritor", "Exconvicto"],
+        ocupacion: ["Vendedor", "Masajista", "Escritor", "Ladrón", "Exconvicto"],
         temporadaAparicion: 1
     },
     {
@@ -30,6 +30,16 @@ const familiaRivasFigueroa = [
         piso: ["Bajo A", "1º C", "2º A"],
         ocupacion: ["Pescadero", "DJ", "Vendedor"],
         temporadaAparicion: 7
+    },
+    {
+        nombre: "Justiniana Latorre",
+        apodo: "Justi",
+        genero: ["Femenino"],
+        hijos: 12,
+        nacionalidad: "Española",
+        piso: ["Bajo A"],
+        ocupacion: ["Jubilado"],
+        temporadaAparicion: 1
     }
 ];
 
@@ -40,7 +50,7 @@ const familiaRecioEscobar = [
         genero: ["Masculino"],
         hijos: 2,
         nacionalidad: "Española",
-        piso: ["Bajo B", "1º C"],
+        piso: ["Caravana", "Bajo B", "1º C"],
         ocupacion: ["Pescadero", "Empresario"],
         temporadaAparicion: 1
     },
@@ -73,7 +83,37 @@ const familiaRecioEscobar = [
         piso: ["1º C"],
         ocupacion: ["Pescadero", "Monja", "Internada"],
         temporadaAparicion: 2
-    }
+    },
+    {
+        nombre: "Rosario Parrales",
+        apodo: "Parrales",
+        genero: ["Masculino"],
+        hijos: "No",
+        nacionalidad: "Colombia",
+        piso: ["Fuera", "1º C"],
+        ocupacion: ["Pescadero", "Varios trabajos"],
+        temporadaAparicion: 4
+    },
+    {
+        nombre: "Mamasita Parrales",
+        apodo: "Luz Marina Montoya",
+        genero: ["Femenino"],
+        hijos: 1,
+        nacionalidad: "Colombia",
+        piso: ["Fuera"],
+        ocupacion: ["Exconvicto", "Narcotraficante"],
+        temporadaAparicion: 5
+    },
+    {
+        nombre: "Manolita",
+        apodo: "",
+        genero: ["Femenino"],
+        hijos: "No",
+        nacionalidad: "Colombia",
+        piso: ["Fuera"],
+        ocupacion: ["Ladrón", "Desempleado"],
+        temporadaAparicion: 5
+    },
 ];
 
 const familiaMarotoTrujillo = [
@@ -136,6 +176,26 @@ const familiaMarotoTrujillo = [
         piso: ["2º B"],
         ocupacion: ["Jubilado"],
         temporadaAparicion: 1
+    },
+    {
+        nombre: "Martina",
+        apodo: "",
+        genero: ["Femenino"],
+        hijos: 1,
+        nacionalidad: "Española",
+        piso: ["Ático B"],
+        ocupacion: ["Masajista", "Terapeuta"],
+        temporadaAparicion: 11
+    },
+    {
+        nombre: "Gabi",
+        apodo: "Javi",
+        genero: ["Masculino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["Fuera"],
+        ocupacion: ["Informático", "Empresario"],
+        temporadaAparicion: 7
     }
 ];
 
@@ -179,17 +239,27 @@ const familiaPastorMadariaga = [
         piso: ["2º B"],
         ocupacion: ["Odontólogo"],
         temporadaAparicion: 5
+    },
+    {
+        nombre: "Julián Pastor",
+        apodo: "Viejo verde",
+        genero: ["Masculino"],
+        hijos: 2,
+        nacionalidad: "Española",
+        piso: ["Bajo B"],
+        ocupacion: ["Jubilado"],
+        temporadaAparicion: 1
     }
 ];
 
 const familiaCarrascosa = [
     {
         nombre: "Menchu Carrascosa",
-        apodo: "",
+        apodo: "Tanqueta",
         genero: ["Femenino"],
         hijos: 2,
         nacionalidad: "Española",
-        piso: ["Bajo B", "2º C", "Ático A"],
+        piso: ["Ático A"],
         ocupacion: ["Jubilado", "Ama de casa", "Narcotraficante"],
         temporadaAparicion: 9
     },
@@ -199,7 +269,7 @@ const familiaCarrascosa = [
         genero: ["Femenino"],
         hijos: "No",
         nacionalidad: "Española",
-        piso: ["Bajo B", "Ático A"],
+        piso: ["Ático A"],
         ocupacion: ["Diseñador", "Narcotraficante"],
         temporadaAparicion: 9
     },
@@ -227,12 +297,22 @@ const familiaCarrascosa = [
         nombre: "Fina Palomares",
         apodo: "Doña Fina",
         genero: ["Femenino"],
-        hijos: 1,
+        hijos: 2,
         nacionalidad: "Española",
         piso: ["2º C"],
         ocupacion: ["Jubilado"],
         temporadaAparicion: 8
-    }
+    },
+    {
+        nombre: "Clara Gutiérrez",
+        apodo: "Clarita",
+        genero: ["Femenino"],
+        hijos: 1,
+        nacionalidad: "Española",
+        piso: ["Fuera"],
+        ocupacion: ["Conserje", "Sirviente", "Pescadero", "Desempleado"],
+        temporadaAparicion: 1
+    },
 ];
 
 const chupipandi = [
@@ -311,16 +391,6 @@ const otrosPersonajes = [
         temporadaAparicion: 7
     },
     {
-        nombre: "Rosario Parrales",
-        apodo: "Parrales",
-        genero: ["Masculino"],
-        hijos: "No",
-        nacionalidad: "Peruano",
-        piso: ["Fuera", "1º C"],
-        ocupacion: ["Pescadero"],
-        temporadaAparicion: 4
-    },
-    {
         nombre: "Mari Tere Valverde",
         apodo: "",
         genero: ["Femenino"],
@@ -384,7 +454,7 @@ const otrosPersonajes = [
         nombre: "Sergio Arias",
         apodo: "Doctor Ventura",
         genero: ["Masculino"],
-        hijos: "No",
+        hijos: 1,
         nacionalidad: "Española",
         piso: ["Bajo A", "Ático A"],
         ocupacion: ["Actor"],
@@ -477,9 +547,29 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Argentina",
         piso: ["Fuera"],
-        ocupacion: ["Psicólogo"],
+        ocupacion: ["Psicólogo", "Terapeuta"],
         temporadaAparicion: 7
     },
+    {
+        nombre: "Rosanna",
+        apodo: "Rosana",
+        genero: ["Femenino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["Fuera"],
+        ocupacion: ["Prostituta"],
+        temporadaAparicion: 11
+    },
+    {
+        nombre: "Alejandro Ledesma",
+        apodo: "Padre Alejandro",
+        genero: ["Masculino"],
+        hijos: "No",
+        nacionalidad: "Española",
+        piso: ["Fuera"],
+        ocupacion: ["Sacerdote"],
+        temporadaAparicion: 5
+    }
 ];
 
 export function getCharacters() {

@@ -1,6 +1,7 @@
 // main.js
 import { getCharacters } from './services/characters.js';
 import { arraysAreEqual, createConfetti, enableInput, disableInput } from './services/logic.js';
+import { getDailyCharacter, updateCountdown } from './services/countdown.js'
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -10,8 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitBtn = document.getElementById('submit-btn');
     const resultDiv = document.getElementById('results-container');
     const victoryDiv = document.getElementById('victory');
+    const countdownDiv = document.getElementById('countdown');
 
-    let currentCharacter = getCharacters()[Math.floor(Math.random() * getCharacters().length)];
+    // let currentCharacter = getCharacters()[Math.floor(Math.random() * getCharacters().length)]; - MODO ILIMITADO
+    let currentCharacter = getDailyCharacter(); // - MODO CLÁSICO
     console.log(currentCharacter.nombre)
 
     // Función para que aparezca la lista de personajes al escribir en el input
@@ -46,46 +49,46 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleSubmit(submitBtn, guessInput, getCharacters, tried, currentCharacter) {
         submitBtn.addEventListener('click', function () {
             disableInput(guessInput);
-    
+
             const guess = guessInput.value.toLowerCase();
             const guessedCharacter = getCharacters().find(personaje => personaje.nombre.toLowerCase() === guess);
-    
+
             if (!guessedCharacter) {
                 enableInput(guessInput);
                 return;
             }
-    
+
             tried.push(guessedCharacter.nombre);
             tried.push(guessedCharacter.apodo);
-    
+
             const isCorrect = guessedCharacter.nombre.toLowerCase() === currentCharacter.nombre.toLowerCase();
-    
+
             let generoHintClass = 'incorrect-hint';
             if (arraysAreEqual(guessedCharacter.genero, currentCharacter.genero)) {
                 generoHintClass = 'correct-hint';
             } else if (guessedCharacter.genero.some(genero => currentCharacter.genero.includes(genero))) {
                 generoHintClass = 'midCorrect-hint';
             }
-    
+
             const hijosHintClass = guessedCharacter.hijos === currentCharacter.hijos ? 'correct-hint' : 'incorrect-hint';
             const nacionalidadHintClass = guessedCharacter.nacionalidad === currentCharacter.nacionalidad ? 'correct-hint' : 'incorrect-hint';
-    
+
             let pisoHintClass = 'incorrect-hint';
             if (arraysAreEqual(guessedCharacter.piso, currentCharacter.piso)) {
                 pisoHintClass = 'correct-hint';
             } else if (guessedCharacter.piso.some(piso => currentCharacter.piso.includes(piso))) {
                 pisoHintClass = 'midCorrect-hint';
             }
-    
+
             let ocupacionHintClass = 'incorrect-hint';
             if (arraysAreEqual(guessedCharacter.ocupacion, currentCharacter.ocupacion)) {
                 ocupacionHintClass = 'correct-hint';
             } else if (guessedCharacter.ocupacion.some(ocupacion => currentCharacter.ocupacion.includes(ocupacion))) {
                 ocupacionHintClass = 'midCorrect-hint';
             }
-    
+
             const temporadaHintClass = guessedCharacter.temporadaAparicion === currentCharacter.temporadaAparicion ? 'correct-hint' : 'incorrect-hint';
-    
+
             let arrowClass;
             if (guessedCharacter.temporadaAparicion > currentCharacter.temporadaAparicion) {
                 arrowClass = 'arrow arrow-down';
@@ -94,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 arrowClass = '';
             }
-    
+
             const newResultHTML = `
                 <table>
                     <tbody>
@@ -121,22 +124,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     </tbody>
                 </table>
             `;
-    
+
             resultDiv.innerHTML += newResultHTML;
             resultDiv.scrollTop = -1000;
-    
+
             const fadeIns = document.querySelectorAll('.fade-in');
             fadeIns.forEach(td => {
                 td.addEventListener('animationend', () => {
                     td.classList.remove('fade-in');
                 });
             });
-    
+
             guessInput.value = '';
             submitBtn.disabled = true;
-    
+
             const lastAnimatedCell = document.querySelector('td:nth-child(7).fade-in');
-    
+
             if (lastAnimatedCell) {
                 lastAnimatedCell.addEventListener('animationend', () => {
                     if (isCorrect) {
@@ -145,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     enableInput(guessInput);
                 });
             } else {
-                enableInput(guessInput); 
+                enableInput(guessInput);
             }
         });
     }
@@ -161,8 +164,10 @@ document.addEventListener('DOMContentLoaded', function () {
         winMessage.classList.add('win-message');
         victoryDiv.appendChild(winMessage);
         createConfetti();
+        countdownDiv.style.display = "block" //  - MODO CLÁSICO
     }
-
+    
+    updateCountdown(); //  - MODO CLÁSICO
     handleInput(guessInput, dataList, submitBtn, getCharacters, tried);
     handleSubmit(submitBtn, guessInput, getCharacters, tried, currentCharacter);
 });
