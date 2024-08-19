@@ -204,7 +204,7 @@ const familiaPastorMadariaga = [
         nombre: "Enrique Pastor",
         apodo: "",
         genero: ["Masculino"],
-        hijos: 1,
+        hijos: 2,
         nacionalidad: "Española",
         piso: ["Bajo B", "Ático A"],
         ocupacion: ["Político"],
@@ -249,6 +249,16 @@ const familiaPastorMadariaga = [
         piso: ["Bajo B"],
         ocupacion: ["Jubilado"],
         temporadaAparicion: 1
+    },
+    {
+        nombre: "Matthew Edwards",
+        apodo: "Fuck fuck fuck",
+        genero: ["Masculino"],
+        hijos: 2,
+        nacionalidad: "Estados unidos",
+        piso: ["Fuera"],
+        ocupacion: ["Desconocido"],
+        temporadaAparicion: 4
     }
 ];
 
@@ -487,7 +497,7 @@ const otrosPersonajes = [
         hijos: "No",
         nacionalidad: "Española",
         piso: ["2º A"],
-        ocupacion: ["Varios trabajos"],
+        ocupacion: ["Desconocido", "Varios trabajos"],
         temporadaAparicion: 11
     },
     {

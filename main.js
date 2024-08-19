@@ -185,6 +185,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Función que cambia el modo de juego
     function switchMode() {
+        guessInput.style.display = 'inline';
+        submitBtn.style.display = 'inline';
+        enableInput(guessInput);
         if (isUnlimitedMode) {
             currentCharacter = getDailyCharacter();
             updateCountdown(countdownDiv);
