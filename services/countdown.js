@@ -4,8 +4,12 @@ import { getCharacters } from './characters.js';
 export function getDailyCharacter() {
     const characters = getCharacters();
     const today = new Date();
+    
+    const timezoneOffsetInMilliseconds = today.getTimezoneOffset() * 60 * 1000;
 
-    const dayNumber = Math.floor(today.getTime() / (24 * 60 * 60 * 1000));
+    const localTime = new Date(today.getTime() - timezoneOffsetInMilliseconds);
+
+    const dayNumber = Math.floor(localTime.getTime() / (24 * 60 * 60 * 1000));
 
     const characterIndex = dayNumber % characters.length;
 
