@@ -104,11 +104,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 arrowClass = '';
             }
 
+            // const newResultHTML = `
+            //     <table>
+            //         <tbody>
+            //             <tr>
+            //                 <td class="name fade-in"><strong>${guessedCharacter.nombre}</strong></td>
+
+            //                 <td class="${generoHintClass} fade-in">
+            //                     ${guessedCharacter.genero.map(genero => genero).join('<br>')}
+            //                 </td>
+
+            //                 <td class="${hijosHintClass} fade-in">${guessedCharacter.hijos}</td>
+            //                 <td class="${nacionalidadHintClass} fade-in">${guessedCharacter.nacionalidad}</td>
+
+            //                 <td class="scroll-cell ${pisoHintClass} fade-in">
+            //                     <div>${guessedCharacter.piso.map(piso => piso).join('<br>')}</div>
+            //                 </td>
+
+            //                 <td class="scroll-cell ${ocupacionHintClass} fade-in">
+            //                     <div>${guessedCharacter.ocupacion.map(ocupacion => ocupacion).join('<br>')}</div>
+            //                 </td>
+
+            //                 <td class="${temporadaHintClass} ${arrowClass} fade-in">${guessedCharacter.temporadaAparicion}</td>
+            //             </tr>
+            //         </tbody>
+            //     </table>
+            // `;
+
             const newResultHTML = `
                 <table>
                     <tbody>
                         <tr>
-                            <td class="name fade-in"><strong>${guessedCharacter.nombre}</strong></td>
+                            <td class="name fade-in">
+<img src="./src/personajes/${guessedCharacter.nombre}.jpg" alt="${guessedCharacter.nombre}" title="${guessedCharacter.nombre}">
+</td>
     
                             <td class="${generoHintClass} fade-in">
                                 ${guessedCharacter.genero.map(genero => genero).join('<br>')}

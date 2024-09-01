@@ -85,8 +85,8 @@ const familiaRecioEscobar = [
         temporadaAparicion: 2
     },
     {
-        nombre: "Rosario Parrales",
-        apodo: "Parrales",
+        nombre: "Parrales",
+        apodo: "Rosario Parrales",
         genero: ["Masculino"],
         hijos: "No",
         nacionalidad: "Colombia",
@@ -148,8 +148,8 @@ const familiaMarotoTrujillo = [
         temporadaAparicion: 1
     },
     {
-        nombre: "Paca Pacheco",
-        apodo: "Estela Reynolds",
+        nombre: "Estela Reynolds",
+        apodo: "Paca Pacheco",
         genero: ["Femenino"],
         hijos: 1,
         nacionalidad: "Española",
@@ -284,8 +284,8 @@ const familiaCarrascosa = [
         temporadaAparicion: 9
     },
     {
-        nombre: "José Morcillo",
-        apodo: "Josito Morcillo",
+        nombre: "Josito Morcillo",
+        apodo: "José Morcillo",
         genero: ["Masculino"],
         hijos: "No",
         nacionalidad: "Española",
@@ -294,8 +294,8 @@ const familiaCarrascosa = [
         temporadaAparicion: 9
     },
     {
-        nombre: "Germán Palomares",
-        apodo: "Moroso",
+        nombre: "Moroso",
+        apodo: "Germán Palomares",
         genero: ["Masculino"],
         hijos: "No",
         nacionalidad: "Española",
@@ -314,8 +314,8 @@ const familiaCarrascosa = [
         temporadaAparicion: 8
     },
     {
-        nombre: "Clara Gutiérrez",
-        apodo: "Clarita",
+        nombre: "Clarita Gutiérrez",
+        apodo: "Clara Gutiérrez",
         genero: ["Femenino"],
         hijos: 1,
         nacionalidad: "Española",
@@ -501,8 +501,8 @@ const otrosPersonajes = [
         temporadaAparicion: 11
     },
     {
-        nombre: "María Teresa",
-        apodo: "Alcaldesa",
+        nombre: "Alcaldesa",
+        apodo: "María Teresa",
         genero: ["Femenino"],
         hijos: 3,
         nacionalidad: "Española",
@@ -511,8 +511,8 @@ const otrosPersonajes = [
         temporadaAparicion: 8
     },
     {
-        nombre: "Alejandro Echevarria",
-        apodo: "Señor ministro",
+        nombre: "Señor ministro",
+        apodo: "Alejandro Echevarria",
         genero: ["Masculino"],
         hijos: 3,
         nacionalidad: "Española",
@@ -541,8 +541,8 @@ const otrosPersonajes = [
         temporadaAparicion: 4
     },
     {
-        nombre: "Héctor",
-        apodo: "Cabeza nido",
+        nombre: "Cabeza nido",
+        apodo: "Héctor",
         genero: ["Masculino"],
         hijos: "No",
         nacionalidad: "Española",
@@ -571,8 +571,8 @@ const otrosPersonajes = [
         temporadaAparicion: 11
     },
     {
-        nombre: "Alejandro Ledesma",
-        apodo: "Padre Alejandro",
+        nombre: "Padre Alejandro",
+        apodo: "Alejandro Ledesma",
         genero: ["Masculino"],
         hijos: "No",
         nacionalidad: "Española",
